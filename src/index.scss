@@ -1,0 +1,151 @@
+@import './styles/variables';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    background: $white;
+    color: $black;
+}
+
+.background,
+.background-picture,
+.background-filter,
+.content-center {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &.background-picture {
+        background: url('/src/assets/workin4.jpg');
+        background-size: cover;
+    }
+
+    &.background-filter {
+        background: rgba($color: #000000, $alpha: 0.5);
+    }
+}
+
+.content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(100% - #{$marginSize * 4});
+    margin: 0 $marginSize * 2;
+}
+
+.wrapper-etape {
+    background: $white;
+    padding: $marginSize * 4;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    
+    .phrase-turbogenerique {
+        text-align: center;
+        font-size: 1.2em;
+        margin-bottom: $marginSize * 2;
+    }
+
+    .animation-chargement-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .animation-chargement {
+            border: $marginSize solid $blue;
+            border-left-color: $red;
+            height: $marginSize * 6;
+            width: $marginSize * 6;
+            border-radius: 50%;
+            -webkit-animation: loadspin 2.5s infinite cubic-bezier(.12,.22,.82,.74);
+            animation: loadspin 2.5s infinite cubic-bezier(.12,.22,.82,.74);
+
+            @keyframes loadspin {
+                0% {
+                  -webkit-transform: rotate(0deg);
+                  transform: rotate(0deg);
+                  border-color: $red;
+                  border-left-color: $blue;
+                }
+                25% {
+                    -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                }
+                50% {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                    border-color: $yellow;
+                    border-left-color: $red;
+                }
+                75% {
+                    -webkit-transform: rotate(540deg);
+                    transform: rotate(540deg);
+                }
+                100% {
+                  -webkit-transform: rotate(720deg);
+                  transform: rotate(720deg);
+                  border-color: $red;
+                  border-left-color: $blue;
+                }
+              }
+        }
+    }
+}
+
+.offre-final {
+    position: relative;
+    .finger {
+        max-width: 100%;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        animation: givefinger 4s ease-in-out;
+    }
+    .hand {
+        max-width: 100%;
+        position: relative;
+        z-index: 11;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    @keyframes givefinger {
+        0% {
+            top: 50%;
+        }
+        100% {
+            top: 0;
+        }
+    }
+}
+
+
+button {
+    padding: $marginSize $marginSize*2;
+    font-size: 1.2em;
+    border: none;
+    transition: 50ms;
+    cursor: pointer;
+    color: $white;
+    background: $button-color;
+
+    &:hover {
+        color: #ffffff;
+        background: $button-color-hover;
+
+    }
+    &:active {
+        background: $button-color-active;
+    }
+}

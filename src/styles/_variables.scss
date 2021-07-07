@@ -1,0 +1,19 @@
+$width-sm: 576px;
+$width-md: 768px;
+$width-lg: 992px;
+$width-xl: 1200px; 
+
+$white: #f7ebe5;
+$red: #f66657;
+$yellow: #e19d32;
+$orange: #e26f37;
+$blue: #11b5d2;
+$black: #2e3131;
+
+$button-color: linear-gradient(to bottom right, $red, $orange); 
+$button-color-hover: linear-gradient(to bottom right, lighten($red, 2), lighten($orange, 2)); 
+$button-color-active: linear-gradient(to bottom right, lighten($red, 10), lighten($orange, 10)); 
+
+$marginSize: 12px;
+$boxshadow: $marginSize * 0.5 ;
+$boxshadow-hover: $marginSize;
