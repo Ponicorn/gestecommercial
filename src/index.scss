@@ -8,10 +8,15 @@
 
 html,
 body {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
     height: 100vh;
     width: 100vw;
     background: $white;
     color: $black;
+}
+
+.wrapper-bouton {
+    text-align: center;
 }
 
 .background,
@@ -25,12 +30,19 @@ body {
     left: 0;
 
     &.background-picture {
-        background: url('/src/assets/workin4.jpg');
+        // background: url('/src/assets/workin4.jpg');
         background-size: cover;
     }
 
+
     &.background-filter {
         background: rgba($color: #000000, $alpha: 0.5);
+    }
+}
+
+@for $i from 1 through 5 {
+    .picture-#{$i} {
+        background: url('/src/assets/workin#{$i}.jpg');
     }
 }
 
@@ -50,7 +62,7 @@ body {
     
     .phrase-turbogenerique {
         text-align: center;
-        font-size: 1.2em;
+        font-size: 1.5em;
         margin-bottom: $marginSize * 2;
     }
 

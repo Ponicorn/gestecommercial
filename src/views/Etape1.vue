@@ -1,5 +1,5 @@
 <template>
-  <div class="phrase-turbogenerique">Bla bla bla bla bla bla ?</div>
+  <div class="phrase-turbogenerique">Vous n'êtes pas satisfait de la prestation haut de gamme de notre société ?</div>
   <div class="wrapper-bouton">
     <router-link to="/chargement">
       <button>
@@ -8,14 +8,4 @@
     </router-link>
   </div>
 </template>
-
-<script setup>
-// import { defineProps, reactive, def } from 'vue'
-
-// defineProps({
-//   msg: String
-// })
-
-// const state = reactive({ count: 0 })
-</script>
 
